@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaInstagram, FaLinkedin, FaTelegramPlane, FaTwitter, FaYoutube, FaCommentDots } from 'react-icons/fa';
 
+
 const sizeClasses = {
   small: "text-sm",
   medium: "text-base",
@@ -44,5 +45,5 @@ const SocialMediaIcons = () => (
     ))}
   </div>
 );
-
+            
 export default SocialMediaIcons;
