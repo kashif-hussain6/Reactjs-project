@@ -11,7 +11,7 @@ const Card = ({ link, logo, heading, text }) => {
           <p className="text-gray-600  w-96 truncate">{text}</p>
         </div>
         <div className="absolute right-5  opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          {/* <FaLink /> */}
+          <FaLink />
         </div>
       </div>
     </a>

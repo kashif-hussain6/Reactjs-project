@@ -4,11 +4,22 @@ import { IoPlanetOutline, IoBookOutline } from "react-icons/io5";
 import Profile from "./components/Profile/profile";
 import SocialMediaIcon from "./components/Social-Icon/Social";
 import Card from "./components/Card/Card";
+import Podcast from "./components/Podcast Episode/Podcast";
+import Vedio from "./components/Latest Video/Vedio";
+import Gallery from "./components/Gallery/Gallery";
+
+const slides = [
+  'https://unicorn-cdn.b-cdn.net/c9a6965d-e063-4e99-8701-35741c7dd8ad/nubelson-fernandes-ie71-tmrrke-unsplash-(1).png?width=1340&height=754',
+  'https://unicorn-cdn.b-cdn.net/7f56e79b-1b1b-4a6b-b652-f6392e58eb74/onur-binay-o2-ezngziyk-unsplash-(1).png?width=1340&height=754',
+  'https://unicorn-cdn.b-cdn.net/24934d1f-378a-49dc-a78c-eba105152be6/theregisti-ziszilqlsom-unsplash-(1).png?width=1340&height=894',
+  'https://unicorn-cdn.b-cdn.net/2efd4e37-8600-4f45-b74c-1db24e525e52/kal-visuals-b5v2bz8uso0-unsplash-(1).png?width=1340&height=894',
+
+];
 
 export default function App() {
   return (
-    <>
-      <section className="flex flex-col bg-[#f5f3ff]">
+    <main className="bg-[#f5f3ff]">
+      <section className="flex flex-col ">
         <div>
           <Profile />
         </div>
@@ -32,7 +43,7 @@ export default function App() {
         <SocialMediaIcon />
       </section>
 
-      <section className="bg-[#f5f3ff] h-screen flex flex-col items-center">
+      <section className="h-screen flex flex-col items-center">
         <div className="font-mono">
           <h1 className="mr-96 mb-1 text-[18px] font-bold">
             Released projects
@@ -80,25 +91,13 @@ export default function App() {
             text="GPT directory with over million visits"
           />
         </div>
-
-
-        
       </section>
 
-      <section className="bg-[#f5f3ff] h-screen flex flex-col items-center">
-  <div className="font-normal">
-    <h1 className="mr-72 mb-0 text-[28px] font-bold">
-      New Podcast Episode
-    </h1>
-    <p className=" text-gray-500">Check out more on Spotify</p>
-  </div>
-  <div className="w-full flex justify-center">
-    <hr className="border-gray-400 w-[560px]" />
-  </div>
-</section>
-
-
-      
-    </>
+      <Podcast />
+      <Vedio />
+      <div className="w-[37%] mt-5 mx-auto rounded-2xl">
+        <Gallery slides={slides} />
+      </div>
+    </main>
   );
 }
