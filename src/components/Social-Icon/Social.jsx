@@ -39,7 +39,7 @@ const socialMediaLinks = [
 ];
 
 const SocialMediaIcons = () => (
-  <div className="flex justify-center items-center gap-3 pt-9 py-4">
+  <div className="flex justify-center items-center flex-wrap gap-3 pt-9 py-4">
     {socialMediaLinks.map(({ icon, link }, index) => (
       <SocialMediaIcon key={index} icon={icon} link={link} />
     ))}

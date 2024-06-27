@@ -3,6 +3,7 @@ import { IoArrowBackSharp, IoArrowForwardSharp } from "react-icons/io5";
 export default function Gallery({ slides }) {
   const [current, setCurrent] = useState(0);
 
+ 
   const previousState = () => {
     if (current === 0) setCurrent(slides.length - 1);
     else setCurrent(current - 1);
@@ -15,9 +16,9 @@ export default function Gallery({ slides }) {
   return (
     <div className="overflow-hidden relative ">
       <div className="font-normal">
-        <h1 className="mr-80  text-[24px] font-bold ">Gallery</h1>
+        <h1 className="pt-4 text-[24px] font-bold ">Gallery</h1>
       </div>
-      <div className="w-full flex justify-center mt-5">
+      <div className="w-full flex justify-center mt-1">
         <hr className="border-gray-400 w-[570px]" />
       </div>
       <div
@@ -31,7 +32,7 @@ export default function Gallery({ slides }) {
         {slides.map((item, index) => {
           return (
             <img
-              className="rounded-2xl mt-7 "
+              className="rounded-2xl mt-7  "
               key={index}
               src={item}
               alt="loading...."
@@ -39,7 +40,7 @@ export default function Gallery({ slides }) {
           );
         })}
       </div>
-      <div className="absolute top-20  h-full w-full flex justify-between items-center text-slate-500 rounded-full">
+      <div className="absolute top-10 h-full w-full flex justify-between items-center text-slate-500">
         <button
           onClick={previousState}
           className="transform transition duration-300 ease-in-out"
@@ -48,13 +49,13 @@ export default function Gallery({ slides }) {
         </button>
         <button
           onClick={nextState}
-          className="transform  transition duration-300 ease-in-out    "
+          className="transform transition duration-300 ease-in-out    "
         >
-          <IoArrowForwardSharp className="w-8 h-8 p-2 ml-6 bg-gradient-to-r from-gray-700 to-white ho hover:text-white rounded-full " />
+          <IoArrowForwardSharp className="w-8 h-8 p-2  bg-gradient-to-r from-gray-700 to-white ho hover:text-white rounded-full " />
         </button>
       </div>
 
-      <div className="absolute bottom-0  w-full cursor-pointer flex justify-center pb-4">
+      <div className="absolute bottom-0  w-full cursor-pointer flex justify-center pb-4 ">
         <div className="bg-[#3b323a] rounded-2xl flex justify-center gap-2 p-2 w-1/5">
           {slides.map((item, index) => {
             return (

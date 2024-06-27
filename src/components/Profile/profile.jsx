@@ -5,10 +5,10 @@ const user = {
 
 export default function Profile() {
   return (
-    <div className="flex flex-col items-center p-2 h-auto">
+    <div className="flex flex-col items-center">
       <div className=" bg-slate-200 p-2  rounded-full mt-20 ">
         <img
-          className="avatar rounded-full mx-auto block w-32  "
+          className=" rounded-full mx-auto block w-32  "
           src={user.imageUrl}
           alt="User's profile"
         />
