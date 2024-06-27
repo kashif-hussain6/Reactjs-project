@@ -7,53 +7,54 @@ import Card from "./components/Card/Card";
 import Podcast from "./components/Podcast Episode/Podcast";
 import Vedio from "./components/Latest Video/Vedio";
 import Gallery from "./components/Gallery/Gallery";
+import SupportMe from "./components/Support/SupportMe";
 
 const slides = [
-  'https://unicorn-cdn.b-cdn.net/c9a6965d-e063-4e99-8701-35741c7dd8ad/nubelson-fernandes-ie71-tmrrke-unsplash-(1).png?width=1340&height=754',
-  'https://unicorn-cdn.b-cdn.net/7f56e79b-1b1b-4a6b-b652-f6392e58eb74/onur-binay-o2-ezngziyk-unsplash-(1).png?width=1340&height=754',
-  'https://unicorn-cdn.b-cdn.net/24934d1f-378a-49dc-a78c-eba105152be6/theregisti-ziszilqlsom-unsplash-(1).png?width=1340&height=894',
-  'https://unicorn-cdn.b-cdn.net/2efd4e37-8600-4f45-b74c-1db24e525e52/kal-visuals-b5v2bz8uso0-unsplash-(1).png?width=1340&height=894',
-
+  "https://unicorn-cdn.b-cdn.net/c9a6965d-e063-4e99-8701-35741c7dd8ad/nubelson-fernandes-ie71-tmrrke-unsplash-(1).png?width=1340&height=754",
+  "https://unicorn-cdn.b-cdn.net/7f56e79b-1b1b-4a6b-b652-f6392e58eb74/onur-binay-o2-ezngziyk-unsplash-(1).png?width=1340&height=754",
+  "https://unicorn-cdn.b-cdn.net/24934d1f-378a-49dc-a78c-eba105152be6/theregisti-ziszilqlsom-unsplash-(1).png?width=1340&height=894",
+  "https://unicorn-cdn.b-cdn.net/2efd4e37-8600-4f45-b74c-1db24e525e52/kal-visuals-b5v2bz8uso0-unsplash-(1).png?width=1340&height=894",
 ];
 
 export default function App() {
   return (
-    <main className="bg-[#f5f3ff]">
-      <section className="flex flex-col ">
-        <div>
-          <Profile />
-        </div>
-        <div className="flex gap-3 justify-center items-center mt-4 w-full">
-          <Button
-            icon={IoPlanetOutline}
-            text="Website"
-            size="medium"
-            bgColor="bg-gray-100"
-            textColor="text-black"
-          />
-          <Button
-            icon={IoBookOutline}
-            text="Newsletter"
-            size="medium"
-            bgColor="bg-gray-100"
-            textColor="text-black"
-          />
-        </div>
+    <main className="bg-[#f5f3ff] ">
+      <section className="px-4 max-w-[34rem] mx-auto sm:px-2">
+        <div className="flex flex-col">
+          <div>
+            <Profile />
+          </div>
+          <div className="flex gap-3 justify-center sm:flex-row flex-col items-center mt-4 w-full">
+            <Button
+              icon={IoPlanetOutline}
+              text="Website"
+              size="medium"
+              bgColor="bg-gray-100"
+              textColor="text-black"
+            />
+            <Button
+              icon={IoBookOutline}
+              text="Newsletter"
+              size="medium"
+              bgColor="bg-gray-100"
+              textColor="text-black"
+            />
+          </div>
 
-        <SocialMediaIcon />
+          <SocialMediaIcon />
+        </div>
       </section>
 
-      <section className="h-screen flex flex-col items-center">
-        <div className="font-mono">
-          <h1 className="mr-96 mb-1 text-[18px] font-bold">
-            Released projects
-          </h1>
-        </div>
+      <section className="flex flex-col px-4 max-w-[33rem] sm:px-2 mx-auto ">
+        <h1 className="font-mono text-lg md:text-xl font-bold text-center">
+          Released projects
+        </h1>
+
         <div className="w-full flex justify-center">
-          <hr className="border-gray-400 w-[560px]" />
+          <hr className="border-gray-400 w-full md:w-[590px]" />
         </div>
 
-        <div className="grid grid-cols-1 gap-4 p-5 w-[600px]">
+        <div className="grid grid-cols-1 gap-4">
           <Card
             link="https://unicornplatform.com"
             logo="https://unicorn-cdn.b-cdn.net/39d8a25d-4687-41c1-8c63-3df582b81d32/unicorn-ios.png?width=600&height=600"
@@ -92,12 +93,38 @@ export default function App() {
           />
         </div>
       </section>
-
-      <Podcast />
-      <Vedio />
-      <div className="w-[37%] mt-5 mx-auto rounded-2xl">
+      <div className="px-4 sm:px-2 max-w-[33rem] mx-auto pt-">
+        <Podcast />
+        <Vedio />
+      </div>
+     
+      <div className="px-4 sm:px-2 max-w-[33rem] mx-auto rounded-2xl">
         <Gallery slides={slides} />
       </div>
+      <div className="px-4 sm:px-2 max-w-[33rem] mx-auto rounded-2xl">
+        <div>
+          <div className="pt-4 text-[24px] font-bold">
+            <h1 className="pt-4 text-[24px]  font-bold">Support Me</h1>
+          </div>
+          <div className="w-full flex justify-center mt-1">
+            <hr className="border-gray-400 md:w-[570px]" />
+          </div>
+        </div>
+        <div className="flex gap-4 items-center justify-between">
+          <SupportMe
+            link="https://unicornplatform.com"
+            logo="https://unicorn-cdn.b-cdn.net/c970fcce-bd41-43e9-bb0f-f858ab8f64c8/patreon.png?width=894&height=716"
+          />
+          <SupportMe
+            link="https://unicornplatform.com"
+            logo="https://unicorn-cdn.b-cdn.net/af8d8c8a-a6a0-4898-be9e-9924e9acdf65/buymeacoffee.png?width=894&height=716"
+          />
+          <SupportMe
+            link="https://unicornplatform.com"
+            logo="https://unicorn-cdn.b-cdn.net/a6398516-bdb1-46f6-ad7a-1cc3fa97c9b8/bitcoin.png?width=894&height=716"
+          />
+        </div>
+      </div> 
     </main>
   );
 }
