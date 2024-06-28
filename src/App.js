@@ -8,6 +8,7 @@ import Podcast from "./components/Podcast Episode/Podcast";
 import Vedio from "./components/Latest Video/Vedio";
 import Gallery from "./components/Gallery/Gallery";
 import SupportMe from "./components/Support/SupportMe";
+import Footer from "./components/footer/Footer";
 
 const slides = [
   "https://unicorn-cdn.b-cdn.net/c9a6965d-e063-4e99-8701-35741c7dd8ad/nubelson-fernandes-ie71-tmrrke-unsplash-(1).png?width=1340&height=754",
@@ -19,7 +20,7 @@ const slides = [
 export default function App() {
   return (
     <main className="bg-[#f5f3ff] ">
-      <section className="px-4 max-w-[34rem] mx-auto sm:px-2">
+      <section className=" max-w-[34rem] mx-auto sm:px-2">
         <div className="flex flex-col">
           <div>
             <Profile />
@@ -45,8 +46,8 @@ export default function App() {
         </div>
       </section>
 
-      <section className="flex flex-col px-4 max-w-[33rem] sm:px-2 mx-auto ">
-        <h1 className="font-mono text-lg md:text-xl font-bold text-center">
+      <section className="flex flex-col px-4 max-w-[33rem] sm:px-2 mx-auto  ">
+        <h1 className="font-mono text-lg md:text-xl font-bold  ">
           Released projects
         </h1>
 
@@ -54,7 +55,7 @@ export default function App() {
           <hr className="border-gray-400 w-full md:w-[590px]" />
         </div>
 
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-4 pt-3">
           <Card
             link="https://unicornplatform.com"
             logo="https://unicorn-cdn.b-cdn.net/39d8a25d-4687-41c1-8c63-3df582b81d32/unicorn-ios.png?width=600&height=600"
@@ -93,7 +94,7 @@ export default function App() {
           />
         </div>
       </section>
-      <div className="px-4 sm:px-2 max-w-[33rem] mx-auto pt-">
+      <div className="px-4 sm:px-2 max-w-[33rem] mx-auto pt-5">
         <Podcast />
         <Vedio />
       </div>
@@ -103,7 +104,7 @@ export default function App() {
       </div>
       <div className="px-4 sm:px-2 max-w-[33rem] mx-auto rounded-2xl">
         <div>
-          <div className="pt-4 text-[24px] font-bold">
+          <div className="pt-5 text-[24px] font-bold">
             <h1 className="pt-4 text-[24px]  font-bold">Support Me</h1>
           </div>
           <div className="w-full flex justify-center mt-1">
@@ -125,6 +126,17 @@ export default function App() {
           />
         </div>
       </div> 
+
+
+
+    <div className="px-4 sm:px-2 max-w-[52rem] mx-auto pt-8  pb-11 ">
+        
+        <Footer/>
+        
+
+
+        </div>
+      
     </main>
   );
 }
